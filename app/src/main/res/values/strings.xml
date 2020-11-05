@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MDM</string>
+
+    <string name="actionbar_control">제어정보</string>
+    <string name="actionbar_state">상태정보</string>
+    <string name="actionbar_policy">정책정보</string>
+
+    <string name="allow">Allow</string>
+    <string name="deny">Deny</string>
+</resources>
