@@ -21,7 +21,8 @@ class MainActivity : AppCompatActivity() {
         }
 
         btn3.setOnClickListener {
-
+            val intent  = Intent(this, MotionLayoutActivity::class.java)
+            startActivity(intent)
         }
     }
 }
