@@ -39,7 +39,7 @@
                 android:id="@+id/img_icon"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:src="@drawable/selector_icon"/>
+                android:src="@drawable/selector_icon_red_green"/>
             <TextView
                 android:id="@+id/item_subtxt"
                 android:layout_width="wrap_content"
@@ -47,7 +47,7 @@
                 android:text="Allow/Deny"
                 android:textSize="16sp"
                 android:textStyle="bold"
-                android:textColor="@drawable/selector_icon_txt"/>
+                android:textColor="@drawable/selector_icon_txt_red_green"/>
         </LinearLayout>
 
     </RelativeLayout>

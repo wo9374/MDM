@@ -1,4 +1,4 @@
-package com.example.mdm
+package com.example.mdm.fragment
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,6 +7,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.mdm.GridAdapter
+import com.example.mdm.Item
+import com.example.mdm.R
 import kotlinx.android.synthetic.main.fragment_control.view.*
 
 

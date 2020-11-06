@@ -3,15 +3,18 @@
     <item
         android:id="@+id/control"
         android:enabled="true"
-        android:title="@string/actionbar_control"/>
+        android:title="@string/actionbar_control"
+        android:icon="@drawable/ic_control_24"/>
 
     <item
         android:id="@+id/state"
         android:enabled="true"
-        android:title="@string/actionbar_state"/>
+        android:title="@string/actionbar_state"
+        android:icon="@drawable/ic_state_24"/>
 
     <item
         android:id="@+id/policy"
         android:enabled="true"
-        android:title="@string/actionbar_policy"/>
+        android:title="@string/actionbar_policy"
+        android:icon="@drawable/ic_policy_24"/>
 </menu>
