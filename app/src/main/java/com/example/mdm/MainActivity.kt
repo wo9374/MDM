@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         btn3.setOnClickListener {
-            val intent  = Intent(this, MotionLayoutActivity::class.java)
+            val intent  = Intent(this, FloatingBtnActivity::class.java)
             startActivity(intent)
         }
     }

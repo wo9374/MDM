@@ -11,9 +11,12 @@ import kotlinx.android.synthetic.main.item_layout.view.*
 
 data class Item(var txt: String, var choice: Boolean)
 
-class GridAdapter(list: ArrayList<Item> ) : RecyclerView.Adapter<GridAdapter.ViewHolder>(){
+class GridAdapter(list: ArrayList<Item>) : RecyclerView.Adapter<GridAdapter.ViewHolder>(){
 
     var itemData: ArrayList<Item> = list
+
+    // 리스너 객체 참조를 저장하는 변수
+    var mListener: OnItemClickListener? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val inflater: LayoutInflater = parent.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
@@ -40,9 +43,27 @@ class GridAdapter(list: ArrayList<Item> ) : RecyclerView.Adapter<GridAdapter.Vie
         return  itemData.size
     }
 
-    class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
+    inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         var item_txt : TextView = itemView.item_txt
         var img_icon : ImageView = itemView.img_icon
         var item_subtxt : TextView = itemView.item_subtxt
+
+        init {
+            itemView.setOnClickListener {
+                val pos = adapterPosition
+                if (pos != RecyclerView.NO_POSITION) {
+                    mListener!!.onItemClick(it, pos)
+                }
+            }
+        }
+    }
+
+    interface OnItemClickListener {
+        fun onItemClick(v: View?, position: Int)
+    }
+
+    // OnItemClickListener 리스너 객체 참조를 어댑터에 전달하는 메서드
+    fun setOnItemClickListener(listener: OnItemClickListener) {
+        this.mListener = listener
     }
 }

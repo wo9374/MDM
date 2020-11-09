@@ -7,15 +7,20 @@
     <color name="teal_700">#FF018786</color>
 
     <color name="black">#FF000000</color>
+    <color name="opacity_black">#99000000</color>
     <color name="white">#FFFFFFFF</color>
 
     <color name="statebar_gray">#6E6E6E</color>
+    <color name="txt_gray">#737373</color>
     <color name="bg_gray">#D8D8D8</color>
 
-
     <color name="txt_orange">#FF8000</color>
-    <color name="txt_gray">#737373</color>
-
     <color name="allow">#00D700</color>
     <color name="deny">#FF0000</color>
+
+    <color name="fab_red">#FA5858</color>
+    <color name="fab_orange">#FAAC58</color>
+    <color name="fab_yellow">#F4FA58</color>
+    <color name="fab_green">#ACFA58</color>
+
 </resources>

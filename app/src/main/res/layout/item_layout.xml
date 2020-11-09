@@ -22,7 +22,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Text"
-            android:textSize="20sp"
+            android:textSize="@dimen/common_20dp"
             android:textStyle="bold"
             android:textColor="@color/black"
 
@@ -37,7 +37,7 @@
             android:layout_marginTop="10dp">
             <ImageView
                 android:id="@+id/img_icon"
-                android:layout_width="wrap_content"
+                android:layout_width="@dimen/common_20dp"
                 android:layout_height="match_parent"
                 android:src="@drawable/selector_icon_red_green"/>
             <TextView
@@ -45,7 +45,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Allow/Deny"
-                android:textSize="16sp"
+                android:textSize="@dimen/common_16dp"
                 android:textStyle="bold"
                 android:textColor="@drawable/selector_icon_txt_red_green"/>
         </LinearLayout>

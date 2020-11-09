@@ -27,10 +27,7 @@ class BottomNavigationActivity : AppCompatActivity() {
         supportActionBar!!.setDisplayHomeAsUpEnabled(true)   //뒤로가기 버튼 활성화
         supportActionBar!!.setHomeAsUpIndicator(R.drawable.ic_dehaze_24) //뒤로가기 버튼의 아이콘을 변경
 
-        fragList = arrayListOf(
-            FragmentControl(), FragmentState(), FragmentPolicy()
-        )
-
+        fragList = arrayListOf(FragmentControl(), FragmentState(), FragmentPolicy())
 
         val transaction: FragmentTransaction = supportFragmentManager.beginTransaction()
         //프래그먼트 매니저에서 트랜잭션 객체 생성(각종 트랜잭션 작업들(추가, 삭제, 교체 등) 가능)

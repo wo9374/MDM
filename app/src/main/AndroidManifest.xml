@@ -9,7 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MDM">
-        <activity android:name=".MotionLayoutActivity"></activity>
+        <activity android:name=".FloatingBtnActivity"/>
         <activity android:name=".BottomNavigationActivity" />
         <activity android:name=".TabLayoutActivity" />
         <activity android:name=".MainActivity">
