@@ -46,7 +46,7 @@
         android:background="@color/white"
         app:itemIconTint="@drawable/selector_icon_gray_orange"
         app:itemTextColor="@drawable/selector_icon_gray_orange"
-        app:menu="@menu/menu_action_bar"
+        app:menu="@menu/menu_bottom_navi"
 
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

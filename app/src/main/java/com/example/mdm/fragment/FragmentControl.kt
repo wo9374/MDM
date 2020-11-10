@@ -11,9 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.mdm.GridAdapter
 import com.example.mdm.Item
 import com.example.mdm.R
-import kotlinx.android.synthetic.main.fragment_control.*
 import kotlinx.android.synthetic.main.fragment_control.view.*
-
 
 class FragmentControl : Fragment(){
 
@@ -46,13 +44,6 @@ class FragmentControl : Fragment(){
         mGridAdapter.setOnItemClickListener(object : GridAdapter.OnItemClickListener {
             override fun onItemClick(v: View?, position: Int) {
                 dataList[position].choice = !dataList[position].choice
-                /* clean up this code
-                if (dataList[position].choice){
-                    dataList[position].choice = false
-                }else{
-                    dataList[position].choice = true
-                }*/
-
                 mGridAdapter.notifyDataSetChanged()
             }
         })
@@ -60,20 +51,17 @@ class FragmentControl : Fragment(){
         mRecycler.layoutManager = GridLayoutManager(activity, 2)
         mRecycler.adapter = mGridAdapter
 
-
+        //전체 허용/거부 버튼
         val btnClickListener = View.OnClickListener { v ->
             when (v.id) {
-                R.id.all_allow -> for (i in 0 until dataList.size) {
-                    dataList[i].choice = true
-                }
-                R.id.all_deny -> for (i in 0 until dataList.size) {
-                    dataList[i].choice = false
-                }
+                R.id.all_allow -> for (i in 0 until dataList.size) { dataList[i].choice = true }
+                R.id.all_deny -> for (i in 0 until dataList.size) { dataList[i].choice = false }
             }
             mGridAdapter.notifyDataSetChanged()
         }
         rootView.all_allow.setOnClickListener(btnClickListener)
         rootView.all_deny.setOnClickListener(btnClickListener)
+
         return rootView
     }
 }

@@ -14,9 +14,7 @@ data class Item(var txt: String, var choice: Boolean)
 class GridAdapter(list: ArrayList<Item>) : RecyclerView.Adapter<GridAdapter.ViewHolder>(){
 
     var itemData: ArrayList<Item> = list
-
-    // 리스너 객체 참조를 저장하는 변수
-    var mListener: OnItemClickListener? = null
+    var mListener: OnItemClickListener? = null // 리스너 객체 참조를 저장하는 변수
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val inflater: LayoutInflater = parent.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater

@@ -22,7 +22,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Hello World!"
+            android:text="FloatingActionBtn"
             android:textSize="20sp"
             android:textStyle="bold"
             android:textColor="@color/txt_gray"/>
@@ -43,6 +43,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/opacity_black"
+        android:clickable="true"
         android:visibility="gone"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -53,8 +54,8 @@
         android:backgroundTint="@color/fab_red"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginRight="@dimen/common_24dp"
-        android:layout_marginBottom="@dimen/common_24dp"/>
+        android:layout_marginRight="@dimen/common_36dp"
+        android:layout_marginBottom="@dimen/common_36dp"/>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/fab_layout1"

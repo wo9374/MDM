@@ -51,8 +51,6 @@ class FloatingBtnActivity : AppCompatActivity(), View.OnClickListener {
         fab_3.setOnClickListener(this)
 
 
-
-
         fragList = arrayListOf(FragmentControl(), FragmentState(), FragmentPolicy())
 
         val transaction: FragmentTransaction = supportFragmentManager.beginTransaction()
@@ -88,7 +86,7 @@ class FloatingBtnActivity : AppCompatActivity(), View.OnClickListener {
     }
 
     fun anim(){
-        if (openFlag){
+        if (openFlag){ //Fab이 눌려있을때 닫는 애니메이션
             sticker.visibility= View.GONE
             fab_layout1.startAnimation(fab_close)
             fab_layout2.startAnimation(fab_close)
@@ -98,7 +96,8 @@ class FloatingBtnActivity : AppCompatActivity(), View.OnClickListener {
             fab_2.isClickable = false
             fab_3.isClickable = false
             openFlag = false
-        }else{
+            
+        }else{        //Fab이 눌리지 않았을 때 여는 애니메이션
             sticker.visibility= View.VISIBLE
             fab_layout1.startAnimation(fab_open)
             fab_layout2.startAnimation(fab_open)
@@ -118,7 +117,7 @@ class FloatingBtnActivity : AppCompatActivity(), View.OnClickListener {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when(item.itemId){
-            //TODO 액션바 메뉴 판별해서 코드 실행
+            //TODO 액션바 메뉴 id 판별해서 코드 실행
         }
         return super.onOptionsItemSelected(item)
     }

@@ -16,7 +16,8 @@
             android:layout_height="wrap_content"
             android:minHeight="?attr/actionBarSize"
             app:layout_scrollFlags="scroll|enterAlways"
-            android:padding="@dimen/common_10dp">
+            android:paddingLeft="@dimen/common_20dp"
+            android:paddingRight="@dimen/common_20dp">
 
             <TextView
                 android:id="@+id/main_title"

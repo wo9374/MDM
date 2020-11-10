@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/control"
+        android:id="@+id/menu1"
         android:enabled="true"
-        android:title="@string/actionbar_control"
-        android:icon="@drawable/ic_control_24"/>
+        android:title="샘플1"
+        android:icon="@drawable/ic_control_24"
+        app:showAsAction="never"/>
 
     <item
-        android:id="@+id/state"
+        android:id="@+id/menu2"
         android:enabled="true"
-        android:title="@string/actionbar_state"
-        android:icon="@drawable/ic_state_24"/>
+        android:title="샘플2"
+        android:icon="@drawable/ic_state_24"
+        app:showAsAction="never"/>
 
     <item
-        android:id="@+id/policy"
+        android:id="@+id/menu3"
         android:enabled="true"
-        android:title="@string/actionbar_policy"
-        android:icon="@drawable/ic_policy_24"/>
+        android:title="샘플3"
+        android:icon="@drawable/ic_policy_24"
+        app:showAsAction="never"/>
 </menu>

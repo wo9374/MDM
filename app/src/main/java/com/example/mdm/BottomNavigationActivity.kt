@@ -37,6 +37,7 @@ class BottomNavigationActivity : AppCompatActivity() {
         }
         transaction.show(fragList[0]).commit()
 
+        //navigation.inflateMenu(R.menu.menu_bottom_navi) //코드 메뉴 지정 방식
         navigation.setOnNavigationItemSelectedListener { item ->
             val transaction: FragmentTransaction = supportFragmentManager.beginTransaction()
             for (i in 0 until fragList.size) { transaction.hide(fragList[i]) /*모든 프래그먼트 숨김*/}
