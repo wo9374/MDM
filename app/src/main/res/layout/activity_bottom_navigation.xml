@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:minHeight="?attr/actionBarSize"
-
+        android:background="@color/bg_orange"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -25,14 +25,14 @@
             android:text="BottonNavigation"
             android:textSize="@dimen/common_20dp"
             android:textStyle="bold"
-            android:textColor="@color/txt_gray"/>
+            android:textColor="@color/black"/>
     </androidx.appcompat.widget.Toolbar>
 
     <FrameLayout
         android:id="@+id/navigation_frame"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="@color/bg_gray"
+        android:background="@color/bg_yellow"
 
         app:layout_constraintBottom_toTopOf="@+id/navigation"
         app:layout_constraintEnd_toEndOf="parent"
@@ -44,8 +44,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
-        app:itemIconTint="@drawable/selector_icon_gray_orange"
-        app:itemTextColor="@drawable/selector_icon_gray_orange"
+        app:itemIconTint="@drawable/selector_icon_black_orange"
+        app:itemTextColor="@drawable/selector_icon_black_orange"
         app:menu="@menu/menu_bottom_navi"
 
         app:layout_constraintBottom_toBottomOf="parent"

@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    app:cardElevation="1dp"
-    app:cardCornerRadius="10dp"
+    app:cardElevation="@dimen/common_2dp"
+    app:cardCornerRadius="@dimen/common_10dp"
     app:cardPreventCornerOverlap="true"
     app:cardUseCompatPadding="true">
     <!-- cardElevation //그림자 효과
@@ -15,7 +15,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:paddingTop="@dimen/common_28dp"
-        android:paddingBottom="@dimen/common_28dp">
+        android:paddingBottom="@dimen/common_28dp"
+        android:background="@drawable/border_round">
 
         <TextView
             android:id="@+id/item_txt"

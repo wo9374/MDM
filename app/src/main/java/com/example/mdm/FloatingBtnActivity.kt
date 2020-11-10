@@ -41,15 +41,14 @@ class FloatingBtnActivity : AppCompatActivity(), View.OnClickListener {
         fab_layout2.startAnimation(fab_close)
         fab_layout3.startAnimation(fab_close)
 
-        fab_1.isClickable = false
-        fab_2.isClickable = false
-        fab_3.isClickable = false
-
         fab_main.setOnClickListener(this)
         fab_1.setOnClickListener(this)
         fab_2.setOnClickListener(this)
         fab_3.setOnClickListener(this)
 
+        fab_1.isClickable = false
+        fab_2.isClickable = false
+        fab_3.isClickable = false
 
         fragList = arrayListOf(FragmentControl(), FragmentState(), FragmentPolicy())
 

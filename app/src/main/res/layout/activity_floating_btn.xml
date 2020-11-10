@@ -11,6 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:minHeight="?attr/actionBarSize"
+        android:background="@color/bg_orange"
 
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -25,14 +26,14 @@
             android:text="FloatingActionBtn"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:textColor="@color/txt_gray"/>
+            android:textColor="@color/black"/>
     </androidx.appcompat.widget.Toolbar>
 
     <FrameLayout
         android:id="@+id/fab_frame"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:background="@color/bg_gray"
+        android:background="@color/bg_yellow"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -83,6 +84,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/ic_control_24"
             android:backgroundTint="@color/fab_orange"
+            android:clickable="false"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -115,6 +117,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/ic_state_24"
             android:backgroundTint="@color/fab_yellow"
+            android:clickable="false"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -147,6 +150,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/ic_policy_24"
             android:backgroundTint="@color/fab_green"
+            android:clickable="false"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
