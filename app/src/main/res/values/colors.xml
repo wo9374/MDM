@@ -24,5 +24,10 @@
     <color name="fab_green">#ACFA58</color>
 
     <color name="bg_orange">#F09661</color>
+    <color name="dark_orange">#b6907f</color>
     <color name="bg_yellow">#FFFFDF</color>
+
+    <color name="switch_thumb">#E6E6E6</color>
+
+    <color name="opacity">#FFFFFFFF</color>
 </resources>

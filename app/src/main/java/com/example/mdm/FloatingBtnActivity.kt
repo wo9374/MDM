@@ -30,8 +30,8 @@ class FloatingBtnActivity : AppCompatActivity(), View.OnClickListener {
 
         setSupportActionBar(toolbar)
         supportActionBar!!.setDisplayShowTitleEnabled(false) //기본 타이틀 사용하지 않게 지정
-        supportActionBar!!.setDisplayHomeAsUpEnabled(true)   //뒤로가기 버튼 활성화
-        supportActionBar!!.setHomeAsUpIndicator(R.drawable.ic_dehaze_24) //뒤로가기 버튼의 아이콘을 변경
+        //supportActionBar!!.setDisplayHomeAsUpEnabled(true)   //뒤로가기 버튼 활성화
+        //supportActionBar!!.setHomeAsUpIndicator(R.drawable.ic_dehaze_24) //뒤로가기 버튼의 아이콘을 변경
 
 
         fab_open = AnimationUtils.loadAnimation(applicationContext, R.anim.fab_open)
@@ -109,7 +109,7 @@ class FloatingBtnActivity : AppCompatActivity(), View.OnClickListener {
         }
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+    /*override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu_action_bar, menu)
         return true
     }
@@ -119,5 +119,5 @@ class FloatingBtnActivity : AppCompatActivity(), View.OnClickListener {
             //TODO 액션바 메뉴 id 판별해서 코드 실행
         }
         return super.onOptionsItemSelected(item)
-    }
+    }*/
 }

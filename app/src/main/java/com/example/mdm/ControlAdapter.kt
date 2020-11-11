@@ -4,17 +4,25 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
+import android.widget.CompoundButton
+import android.widget.Switch
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.item_layout.view.*
 
+
 data class Item(var txt: String, var choice: Boolean)
 
-class GridAdapter(list: ArrayList<Item>) : RecyclerView.Adapter<GridAdapter.ViewHolder>(){
+class ControlAdapter(list: ArrayList<Item>) : RecyclerView.Adapter<ControlAdapter.ViewHolder>(){
 
     var itemData: ArrayList<Item> = list
-    var mListener: OnItemClickListener? = null // 리스너 객체 참조를 저장하는 변수
+    var onItemCheckedListener: OnCheckedChangeListener? = null
+
+    //스위치 버튼 리스너
+    val mOnCheckedChangeListener = CompoundButton.OnCheckedChangeListener { buttonView, isChecked ->
+        val position = buttonView.tag as Int  //onBindViewHolder에서 태그에 set해준 position을 get
+        if (onItemCheckedListener != null) { onItemCheckedListener!!.onCheckedChanged(position, isChecked) }
+    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val inflater: LayoutInflater = parent.context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
@@ -25,16 +33,9 @@ class GridAdapter(list: ArrayList<Item>) : RecyclerView.Adapter<GridAdapter.View
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val data : Item = itemData[position]
         holder.item_txt.text = data.txt
-
-        if (data.choice){
-            holder.item_subtxt.text = "Allow"
-        }
-        else{
-            holder.item_subtxt.text = "Deny"
-        }
-
-        holder.img_icon.isSelected = data.choice
-        holder.item_subtxt.isSelected = data.choice
+        holder.switch_btn.tag = position //태그에 position set
+        holder.switch_btn.isChecked = data.choice
+        holder.switch_btn.setOnCheckedChangeListener(mOnCheckedChangeListener)
     }
 
     override fun getItemCount(): Int {
@@ -43,25 +44,15 @@ class GridAdapter(list: ArrayList<Item>) : RecyclerView.Adapter<GridAdapter.View
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         var item_txt : TextView = itemView.item_txt
-        var img_icon : ImageView = itemView.img_icon
-        var item_subtxt : TextView = itemView.item_subtxt
-
-        init {
-            itemView.setOnClickListener {
-                val pos = adapterPosition
-                if (pos != RecyclerView.NO_POSITION) {
-                    mListener!!.onItemClick(it, pos)
-                }
-            }
-        }
+        var switch_btn : Switch = itemView.switch_btn
     }
 
-    interface OnItemClickListener {
-        fun onItemClick(v: View?, position: Int)
+    interface OnCheckedChangeListener {
+        fun onCheckedChanged(position: Int, isChecked: Boolean)
     }
-
-    // OnItemClickListener 리스너 객체 참조를 어댑터에 전달하는 메서드
-    fun setOnItemClickListener(listener: OnItemClickListener) {
-        this.mListener = listener
+    
+    //OnCheckedChangeListener 리스너 객체 참조를 어댑터에 전달하는 메소드
+    fun setOnCheckedChangeListener(listener: OnCheckedChangeListener) {
+        onItemCheckedListener = listener
     }
 }

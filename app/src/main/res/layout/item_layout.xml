@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:cardElevation="@dimen/common_2dp"
@@ -14,9 +15,9 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/border_round"
         android:paddingTop="@dimen/common_28dp"
-        android:paddingBottom="@dimen/common_28dp"
-        android:background="@drawable/border_round">
+        android:paddingBottom="@dimen/common_28dp">
 
         <TextView
             android:id="@+id/item_txt"
@@ -26,37 +27,26 @@
             android:textColor="@color/black"
             android:textSize="@dimen/common_20dp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+            android:layout_marginBottom="@dimen/common_5dp"
+            app:layout_constraintBottom_toTopOf="@+id/switch_btn"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <LinearLayout
-            android:id="@+id/linearLayout"
+        <Switch
+            android:id="@+id/switch_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toBottomOf="parent"
+            android:switchMinWidth="@dimen/common_60dp"
+            android:thumb="@drawable/switch_thumb"
+            android:track="@drawable/switch_track_selector"
+            android:layout_marginTop="@dimen/common_5dp"
+            app:layout_constraintBottom_toTopOf="@+id/item_txt"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/item_txt">
-
-            <ImageView
-                android:id="@+id/img_icon"
-                android:layout_width="@dimen/common_20dp"
-                android:layout_height="match_parent"
-                android:src="@drawable/selector_icon_red_green" />
-
-            <TextView
-                android:id="@+id/item_subtxt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Allow/Deny"
-                android:textColor="@drawable/selector_icon_txt_red_green"
-                android:textSize="@dimen/common_16dp"
-                android:textStyle="bold" />
-        </LinearLayout>
+            app:layout_constraintTop_toBottomOf="@+id/item_txt" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.cardview.widget.CardView>
